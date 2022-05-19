@@ -5,10 +5,11 @@ export interface TabProps {
     content: {
         title: string
         text: string
-    }[]
+    }[];
+    tabTitle: string;
 }
 
-export function Tab({ content }: TabProps) {
+export function Tab({ content, tabTitle }: TabProps) {
   const [currentOption, setCurrentOption] = useState(0);
 
   function select(optionIndex: number) {
@@ -27,7 +28,7 @@ export function Tab({ content }: TabProps) {
 
   const tabMode = (
     <div className="tabPane">
-      <h1>React</h1>
+      <div> <h1> {tabTitle} </h1> </div>
       {buttons}
       <div className="textPane"> {content[currentOption].text} </div>
     </div>

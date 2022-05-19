@@ -9,7 +9,7 @@ function App() {
   return <Tab content = {[
     {
       title: "Tab 1",
-      text: "Texto da tab 1!!"
+      text: "Texto da tab 1"
     },
     {
       title: "Tab 2",
@@ -22,6 +22,10 @@ function App() {
     {
       title: "Tab 4",
       text: "Texto da tab 4"
+    },
+    {
+      title: "Tab 5",
+      text: "Texto da tab 5"
     }
   ]} />;
 }
