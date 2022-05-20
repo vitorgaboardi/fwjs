@@ -3,7 +3,10 @@ import { Tab, TabProps } from "../components/Tab"
 
 export default {
     title: 'Tab/Tab',
-    component: Tab
+    component: Tab,
+    argTypes: {
+      textBackgroundColor: { control: 'color' },
+    },
 } as ComponentMeta<typeof Tab>
 
 
@@ -29,10 +32,6 @@ Tab1.args = {
       title: "Tab 4",
       text: "Texto da tab 4"
     },
-    {
-      title: "Tab 5",
-      text: "Texto da tab 5"
-    }
   ],
   tabTitle: 'Tab em React!'
 };

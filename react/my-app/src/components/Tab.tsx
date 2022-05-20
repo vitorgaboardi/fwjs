@@ -1,4 +1,5 @@
 import "./Tab.css";
+import { MainText } from './MainText';
 import React, { useState } from "react";
 
 export interface TabProps {
@@ -7,16 +8,17 @@ export interface TabProps {
         text: string
     }[];
     tabTitle: string;
+    textBackgroundColor?: string;
 }
 
-export function Tab({ content, tabTitle }: TabProps) {
+export function Tab(props: TabProps) {
   const [currentOption, setCurrentOption] = useState(0);
 
   function select(optionIndex: number) {
     setCurrentOption(optionIndex);
   }
 
-  const buttons = content.map((obj, index) => (
+  const buttons = props.content.map((obj, index) => (
     <button
       key={obj.title}
       className={index === currentOption ? "selected" : ""}
@@ -28,9 +30,14 @@ export function Tab({ content, tabTitle }: TabProps) {
 
   const tabMode = (
     <div className="tabPane">
-      <div> <h1> {tabTitle} </h1> </div>
+      <div> <h1> {props.tabTitle} </h1> </div>
       {buttons}
-      <div className="textPane"> {content[currentOption].text} </div>
+      
+      <MainText 
+        text={props.content[currentOption].text}
+        backgroundColor={props.textBackgroundColor}
+      />
+      
     </div>
   );
 

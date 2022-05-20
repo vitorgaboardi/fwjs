@@ -1,4 +1,7 @@
-.tabPane {
-    padding: 50px;
-    text-align: center;
+.textPane {
+    padding: 40px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    background-color: #f0f0f0;
   }
