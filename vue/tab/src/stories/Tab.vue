@@ -1,6 +1,8 @@
 <template>
   <div className="tabPane">
-    <h1>Vue</h1>
+    <div> 
+    <h1> {{ tabTitle }}</h1>
+    </div>
     <button
       v-for="(option, index) in content"
       :key="option"
@@ -19,24 +21,16 @@
 import {ref} from 'vue';
 import Option, { type OptionProps } from './Option.vue';
 
-const content: OptionProps[] = [
-  {
-    title: 'Tab 1',
-    text: 'Texto da tab 1',
-  },
-  {
-    title: 'Tab 2',
-    text: 'Texto da tab 2',
-  },
-  {
-    title: 'Tab 3',
-    text: 'Texto da tab 3',
-  },
-  {
-    title: 'Tab 4',
-    text: 'Texto da tab 4',
-  },
-];
+export interface TabProps {
+  content: {
+    title: string;
+    text: string;
+  }[];
+  tabTitle: string;
+}
+
+// definindo as propriedades
+defineProps<TabProps>();
 
 const currentOption = ref(0); // armazena qual é a Opção selecionada no momento.
 
