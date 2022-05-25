@@ -1,0 +1,21 @@
+button {
+    margin: 0px 15px 12px 15px;
+    background-color: #eee;
+    border: 2px solid rgb(118, 118, 118);
+    border-radius: 3px;
+    padding: 5px 30px;
+  }
+  
+  .textPane {
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    font-weight: bold;
+    background-color: #aaa;
+  }
+  
