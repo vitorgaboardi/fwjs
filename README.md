@@ -24,3 +24,7 @@ Levando em consideração o *typescript*, tem-se:
 ```
 npx create-react-app my-app --template typescript
 ```
+
+# Projeto no CodeSandBox:
+
+https://codesandbox.io/s/tab-storybook-react-k415y7?file=/README.md
